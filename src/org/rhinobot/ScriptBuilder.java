@@ -59,9 +59,12 @@ public class ScriptBuilder {
                     global.defineProperty("android", android, ScriptableObject.DONTENUM);
 
                     // install the global require function for all modules
-                    AndroidScriptProvider provider = new AndroidScriptProvider(assets);
-                    Require require = new Require(cx, packages, provider, null, null, false);
-                    require.install(global);
+                    // AndroidScriptProvider provider = new
+                    // AndroidScriptProvider(assets);
+                    // Require require = new Require(cx,
+                    // packages.getParentScope(), provider, null,
+                    // null, false);
+                    // require.install(global);
 
                     return null;
                 }
@@ -83,6 +86,21 @@ public class ScriptBuilder {
                 WrapFactory wrapFactory = cx.getWrapFactory();
                 Object wrapped = wrapFactory.wrap(cx, global, value, null);
                 scope.put(name, scope, wrapped);
+                return null;
+            }
+        });
+        return this;
+    }
+
+    public ScriptBuilder installRequire() {
+        ContextFactory.getGlobal().call(new ContextAction() {
+            public Object run(org.mozilla.javascript.Context cx) {
+
+                AndroidScriptProvider provider = new AndroidScriptProvider(assets);
+                Require require = new Require(cx, scope, provider, null,
+                        null, false);
+                require.install(global);
+
                 return null;
             }
         });

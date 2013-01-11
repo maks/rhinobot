@@ -1,3 +1,2 @@
-exports.answer = function () {
-    return 42;
-}
+var {Log} = android.util;
+var {alert} = require("io");

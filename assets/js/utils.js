@@ -5,12 +5,6 @@
 var {Intent} = android.content;
 var {Main, R} = org.rhinobot;
 var {ViewSourceActivity} = org.rhinobot.ui;
-var {Toast} = android.widget;
-
-// display a message
-function alert(message) {
-    Toast.makeText(activity, String(message), Toast.LENGTH_SHORT).show();
-}
 
 // called when an options menu item is selected
 activity.on("select", function(menuItem) {

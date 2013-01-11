@@ -2,7 +2,7 @@
  * main.js - display a list of available demos
  */
 
-var answer = require('tests').answer;
+var {alert} = require("io");
 
 var {ArrayAdapter} = android.widget;
 var {Intent} = android.content;
@@ -21,7 +21,6 @@ activity.on({
         var class = org.rhinobot.demo[items[item]];
         //var intent = new Intent(activity, class);
         //activity.startActivity(intent);
-        //alert("You selected "+item+ " - "+items[item]);
-        alert("the answer is "+answer());
+        alert("You selected "+item+ " - "+items[item]);
     }
 });
