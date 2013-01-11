@@ -1,4 +1,4 @@
-# Project Grimlock
+# Rhinobot
 
 ## Author: Maksim Lin <maks@manichord.com>
 
