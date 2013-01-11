@@ -10,6 +10,9 @@ import org.mozilla.javascript.NativeObject;
 import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
 import org.mozilla.javascript.WrapFactory;
+import org.mozilla.javascript.commonjs.module.Require;
+import org.mozilla.javascript.commonjs.module.RequireBuilder;
+
 import static org.mozilla.javascript.ScriptableObject.DONTENUM;
 
 import java.io.IOException;
@@ -43,7 +46,7 @@ public class ScriptBuilder {
      * @param assets the asset manager to retrieve the source
      * @param languageVersion the JS version
      */
-    public ScriptBuilder(AssetManager assets, int languageVersion) {
+    public ScriptBuilder(final AssetManager assets, int languageVersion) {
         this.assets = assets;
         this.languageVersion = languageVersion;
         if (global == null) {
@@ -54,6 +57,12 @@ public class ScriptBuilder {
                     Scriptable packages = (Scriptable) global.get("Packages", global);
                     Object android = packages.get("android", packages);
                     global.defineProperty("android", android, ScriptableObject.DONTENUM);
+
+                    // install the global require function for all modules
+                    AndroidScriptProvider provider = new AndroidScriptProvider(assets);
+                    Require require = new Require(cx, packages, provider, null, null, false);
+                    require.install(global);
+
                     return null;
                 }
             });

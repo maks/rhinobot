@@ -28,5 +28,7 @@ public class Main extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         events.invoke(ActivityEvent.click, Integer.valueOf(position));
     }
+    
+
 
 }
