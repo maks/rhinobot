@@ -1,8 +1,8 @@
 
 ## TODO
 
-* build app using own built js.jar
-* implement commonjs loader, loading from assets, then sdcard lib location, then project location
+* build app using own built js.jar [DONE]
+* implement commonjs loader, loading from assets [DONE], then sdcard lib location, then project location
 * implement all activity life cycle methods into js 'on' callbacks
 * fragments for script editor and console output
 * browser style console output
@@ -10,7 +10,7 @@
 * allow op editing bundled scripts, copy of. assets to sdcard ?
 * shortcut buttons for us constructs for quick TS editing
 * version bundled scripts and project using git
-* auto complete from android class liub a pi
+* auto complete from android class lib api calls
 * inline docs display for android api
 
 

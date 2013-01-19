@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
-import org.manichord.grimlock.events.ActivityEvent;
 import org.rhinobot.EventMap;
 import org.rhinobot.R;
 import org.rhinobot.ScriptBuilder;
+import org.rhinobot.events.ActivityEvent;
 
 public class Main extends ListActivity {
 

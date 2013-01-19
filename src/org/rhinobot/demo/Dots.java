@@ -4,10 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import org.manichord.grimlock.events.ActivityEvent;
 import org.rhinobot.EventMap;
 import org.rhinobot.R;
 import org.rhinobot.ScriptBuilder;
+import org.rhinobot.events.ActivityEvent;
 import org.rhinobot.widget.ScriptedView;
 
 public class Dots extends Activity {

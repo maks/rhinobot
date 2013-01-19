@@ -6,9 +6,9 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import org.manichord.grimlock.events.ViewEvent;
 import org.mozilla.javascript.ScriptRuntime;
 import org.rhinobot.EventMap;
+import org.rhinobot.events.ViewEvent;
 
 public class ScriptedView extends View {
 

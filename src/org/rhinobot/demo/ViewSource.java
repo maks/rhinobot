@@ -6,10 +6,10 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.manichord.grimlock.events.ActivityEvent;
 import org.rhinobot.EventMap;
 import org.rhinobot.R;
 import org.rhinobot.ScriptBuilder;
+import org.rhinobot.events.ActivityEvent;
 
 import java.io.BufferedReader;
 import java.io.IOException;

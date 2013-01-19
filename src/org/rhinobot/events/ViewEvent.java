@@ -1,4 +1,4 @@
-package org.manichord.grimlock.events;
+package org.rhinobot.events;
 
 /**
  * View related events used in this app.
