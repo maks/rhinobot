@@ -3,10 +3,11 @@
  */
 
 var {Color, Paint} = android.graphics;
+var {alert} = require("io");
 
 var MAXDOTS = 100;
 var dots = [];
-var colors = [Color.YELLOW, Color.RED, Color.BLUE, Color.GREEN];
+var colors = [Color.YELLOW, Color.RED, Color.BLUE, Color.GREEN, Color.GRAY];
 
 // called when the activity is created
 activity.on("create", function(bundle) {
@@ -25,7 +26,7 @@ activity.on("retain", function() {
 
 // set touch event handler on the view
 view.on("touch", function(event) {
-    var count = Math.min(event.getPointerCount(), 4);
+    var count = Math.min(event.getPointerCount(), 5);
     var hist = event.getHistorySize();
     // process batched events
     for (var i = 0; i < count; i++) {

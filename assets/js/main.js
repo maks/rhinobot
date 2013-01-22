@@ -3,8 +3,6 @@
  */
 
 var {alert} = require("io");
-var {assert} = require("test");
-var {fake} = require("fake");
 
 var {ArrayAdapter} = android.widget;
 var {Intent} = android.content;
@@ -21,8 +19,8 @@ activity.on({
 
     click: function(item) {
         var class = org.rhinobot.demo[items[item]];
-        //var intent = new Intent(activity, class);
-        //activity.startActivity(intent);
+        var intent = new Intent(activity, class);
+        activity.startActivity(intent);
         alert("You selected "+item+ " - "+items[item]);
     }
 });
