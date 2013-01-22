@@ -3,6 +3,8 @@
  */
 
 var {alert} = require("io");
+var {assert} = require("test");
+var {fake} = require("fake");
 
 var {ArrayAdapter} = android.widget;
 var {Intent} = android.content;
