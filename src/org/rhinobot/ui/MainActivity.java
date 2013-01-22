@@ -18,8 +18,7 @@ import java.io.File;
 public class MainActivity extends ListActivity {
 
     public static final File EXT_MODULE_DIR = new File(
-            Environment.getExternalStorageDirectory(),
-            "rhinobot");
+            Environment.getExternalStorageDirectory(), "rhinobot");
 
     private static final String TAG = MainActivity.class.getSimpleName();
     EventMap<ActivityEvent> events = EventMap.create(ActivityEvent.class);
@@ -27,11 +26,8 @@ public class MainActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "Creating MainActivity ");
-
         EXT_MODULE_DIR.mkdirs();
-
         setContentView(R.layout.main);
-
         try {
             new ScriptBuilder(getAssets())
                     .defineEventSource("activity", this, events)

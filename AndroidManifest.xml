@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ViewSource"
+            android:name=".ui.ViewSourceActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/view_source" />
         
